@@ -1,16 +1,26 @@
-## Hi there 👋
+# 💻 반갑습니다, 백엔드 개발자 나영준입니다.
 
-<!--
-**happyzerojun/happyzerojun** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+> **기획부터 Vercel 배포까지 완주하는, 광주일보 보도로 검증된 실행력을 갖춘 백엔드 개발자입니다.**
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🚀 About Me
+- 💡 **검증된 실행력**: 대학가 고물가 속 학우들의 식비 부담을 줄이기 위해 기획·개발한 '가성비 맛집 지도'가 큰 호응을 얻으며 **광주일보에 단독 인터뷰로 보도**되었습니다.
+- 🛠️ **탄탄한 백엔드 기초**: 정보처리기사 및 SQLD 자격을 기반으로 정규화된 데이터 모델링(ERD)과 쿼리 최적화가 가능하며, NCA 자격을 통해 클라우드 인프라에 대한 이해도를 보유하고 있습니다.[cite: 1]
+- 🤝 **소통 중심의 리더십**: 컴퓨터공학과 학생회장으로서 300명 규모의 대규모 행사를 총괄하며, 협업을 매끄럽게 이끄는 안정적인 커뮤니케이션 역량을 증명했습니다.[cite: 1]
+
+---
+
+### 🛠️ Tech Stacks
+- **Backend:** Java, Spring Boot, Spring Data JPA[cite: 1]
+- **Database:** MySQL (SQLD 자격 보유)[cite: 1]
+- **DevOps/Infra:** Docker, AWS, Vercel[cite: 1]
+- **Frontend:** React[cite: 1]
+
+---
+
+### 🔗 More About Me
+인사담당자님을 위해 프로젝트 트러블슈팅 과정과 기술적 성과를 상세히 기록해 둔 포트폴리오입니다. 아래 링크를 통해 확인하실 수 있습니다.
+
+* 📝 [**노션 상세 이력서 및 포트폴리오 보기**](https://www.notion.so/af866e443fdc45cb8d58adf062166958?source=copy_link)
+* 💼 [**원티드 매치업 프로필 보기**](본인의원티드프로필링크)
