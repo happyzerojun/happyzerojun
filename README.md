@@ -23,4 +23,4 @@
 인사담당자님을 위해 프로젝트 트러블슈팅 과정과 기술적 성과를 상세히 기록해 둔 포트폴리오입니다. 아래 링크를 통해 확인하실 수 있습니다.
 
 * 📝 [**노션 상세 이력서 및 포트폴리오 보기**](https://www.notion.so/af866e443fdc45cb8d58adf062166958?source=copy_link)
-* 💼 [**기사 확인하기**]((http://kwangju.co.kr/article.php?aid=1779183000799171028)
+* 💼 [**기사 확인하기**](http://kwangju.co.kr/article.php?aid=1779183000799171028)
