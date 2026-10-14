@@ -52,7 +52,7 @@
 `백엔드` `요구사항 → ERD → API → 구현` · [데모](https://m-space-rho.vercel.app)
 `Java` `Spring Boot 4.1` `JPA` `PostgreSQL 17` `Testcontainers` `Git Flow`
 
-- 겹치는 예약을 애플리케이션 조회가 아니라 **PostgreSQL `EXCLUDE` 제약(btree_gist)** 으로 막아 동시 요청에서도 이중 예약 0
+- 겹치는 예약을 애플리케이션 조회가 아니라 **PostgreSQL `EXCLUDE` 제약(btree_gist)** 으로 막도록 스키마 설계, 같은 방·같은 시간 동시 INSERT 10건 중 1건만 성공함을 Testcontainers 테스트로 검증 (예약 API는 설문 반영 후 구현 중)
 - 최대 2시간 · 하루 1건 · 7일 이내, 15분 노쇼 · 2주 내 2회 시 7일 제한 규칙을 **예약 상태 머신**으로 설계
 - H2 대신 Testcontainers로 실제 PostgreSQL에서 제약까지 검증, CHANGELOG(v0.1.0 ~ v0.3.1)와 트러블슈팅 14건 문서화
 
