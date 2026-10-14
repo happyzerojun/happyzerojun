@@ -5,6 +5,7 @@
 
 <p>
   <a href="https://www.notion.so/af866e443fdc45cb8d58adf062166958?source=copy_link"><img src="https://img.shields.io/badge/Notion-포트폴리오_·_이력서-000000?style=flat-square&logo=notion&logoColor=white"/></a>
+  <a href="https://airforce836.tistory.com"><img src="https://img.shields.io/badge/Tech_Blog-트러블슈팅_기록-EB531F?style=flat-square&logo=tistory&logoColor=white"/></a>
   <a href="http://kwangju.co.kr/article.php?aid=1779183000799171028"><img src="https://img.shields.io/badge/광주일보-인터뷰_보도-1F6FEB?style=flat-square"/></a>
 </p>
 
@@ -27,6 +28,7 @@
 - **자연어 프로젝트 추천 엔진** — 요청에서 기술 스택을 추출해 DB에서 후보를 먼저 좁히고(RAG), Gemini가 고른 결과를 **DB에서 다시 검증해 존재하지 않는 프로젝트(환각)를 걸러내는** 구조로 설계
 - 사용자 · 프로젝트 · 기술 스택 · 지원 · 상호 평가를 아우르는 **ERD와 엔티티 설계**, N:M 관계 분리와 도메인 메서드로 규칙 캡슐화
 - Docker Compose 실행 환경 표준화, Swagger 문서화, **PR 18건 리뷰 · 머지 및 병합 충돌 해결**
+- 종료 후 셀프 리뷰로 예외 메시지 노출 · 외부 API 타임아웃 부재 · 상태 전이 검증 누락을 고치고 GitHub Actions CI 도입 → [트러블슈팅](https://github.com/happyzerojun/team-builder-backend/blob/main/docs/troubleshooting.md)
 
 ### 🛒 [Commerce Web](https://github.com/happyzerojun/commerceweb-project) — 협업 필터링 추천 쇼핑몰
 `풀스택` `2인` `2026.01`
@@ -35,6 +37,7 @@
 - **사용자 기반 협업 필터링** — 셀프 조인 쿼리로 유사 사용자를 DB에서 한 번에 찾고, 신규 사용자 Cold Start는 인기 상품으로 대체, 결과는 **Redis에 캐싱**
 - JWT 무상태 인증과 역할(구매자 / 판매자)별 접근 제어, **주문 이력으로 검증하는 리뷰**로 평점 조작 방지
 - PostgreSQL · Redis · Spring · Nginx 4개 서비스를 Docker Compose로 구성해 EC2 배포, Mockito 단위 테스트로 추천 로직 검증
+- 셀프 리뷰로 위조 서명 JWT가 500이 되던 문제, 추천 순위가 `IN` 조회 순서로 뒤섞이던 버그를 회귀 테스트와 함께 수정 → [트러블슈팅](https://github.com/happyzerojun/commerceweb-project/blob/main/docs/troubleshooting.md)
 
 ### 🍽️ [조대 후문 가성비 맛집 지도](https://github.com/happyzerojun/chosun-food-map) — 위치 기반 맛집 · 익명 리뷰 서비스
 `1인 개발` `광주일보 보도` `2026.05 ~ 06`
@@ -43,6 +46,15 @@
 - 로그인 없는 익명 리뷰의 도배를 막기 위해 **IP를 SHA-256 + pepper로 해시해 저장(원문 미보관)** 하고, 식당별 하루 1회 작성 제한을 서버에서 검증
 - 리뷰 비밀번호는 bcrypt 해시만 저장, DB 쓰기 키는 서버리스 함수에만 두어 브라우저에 노출하지 않는 구조
 - 실제 실행되는 두 쿼리에 맞춘 **복합 인덱스 설계**, 가격 · 별점을 마커에 바로 띄우는 지도 UX와 마커 클러스터링
+- 하루 1회 제한의 조회 후 저장 경쟁 조건을 DB 유니크 인덱스로 막고, UTC 기준 날짜 버그를 KST로 수정 → [트러블슈팅](https://github.com/happyzerojun/chosun-food-map/blob/main/docs/troubleshooting.md)
+
+### 🏫 [M-SPACE](https://github.com/happyzerojun/M-SPACE) — 학과 공간 예약 시스템
+`백엔드` `요구사항 → ERD → API → 구현` · [데모](https://m-space-rho.vercel.app)
+`Java` `Spring Boot 4.1` `JPA` `PostgreSQL 17` `Testcontainers` `Git Flow`
+
+- 겹치는 예약을 애플리케이션 조회가 아니라 **PostgreSQL `EXCLUDE` 제약(btree_gist)** 으로 막아 동시 요청에서도 이중 예약 0
+- 최대 2시간 · 하루 1건 · 7일 이내, 15분 노쇼 · 2주 내 2회 시 7일 제한 규칙을 **예약 상태 머신**으로 설계
+- H2 대신 Testcontainers로 실제 PostgreSQL에서 제약까지 검증, CHANGELOG(v0.1.0 ~ v0.3.1)와 트러블슈팅 14건 문서화
 
 ---
 
@@ -72,4 +84,4 @@
 
 ## 📬 Contact
 
-프로젝트별 트러블슈팅 과정과 회고는 [**노션 포트폴리오**](https://www.notion.so/af866e443fdc45cb8d58adf062166958?source=copy_link)에 정리해 두었습니다.
+프로젝트별 설계 근거와 트러블슈팅은 [**기술 블로그**](https://airforce836.tistory.com)와 [**노션 포트폴리오**](https://www.notion.so/af866e443fdc45cb8d58adf062166958?source=copy_link)에 정리해 두었습니다.
