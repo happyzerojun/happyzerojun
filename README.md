@@ -4,7 +4,7 @@
 > 학우들의 식비 고민에서 출발한 서비스로 **광주일보 인터뷰 보도**를 받았고, 4인 캡스톤 팀의 **팀장 · 백엔드 리드**로 AI 추천 기능과 협업 프로세스를 이끌었습니다.
 
 <p>
-  <a href="https://www.notion.so/af866e443fdc45cb8d58adf062166958?source=copy_link"><img src="https://img.shields.io/badge/Notion-포트폴리오_·_이력서-000000?style=flat-square&logo=notion&logoColor=white"/></a>
+  <a href="https://youngjun-na.notion.site/Youngjun-Na-3ffa6cb817a381c1a891fcb25fa1e019"><img src="https://img.shields.io/badge/Notion-포트폴리오_·_이력서-000000?style=flat-square&logo=notion&logoColor=white"/></a>
   <a href="https://airforce836.tistory.com"><img src="https://img.shields.io/badge/Tech_Blog-트러블슈팅_기록-EB531F?style=flat-square&logo=tistory&logoColor=white"/></a>
   <a href="http://kwangju.co.kr/article.php?aid=1779183000799171028"><img src="https://img.shields.io/badge/광주일보-인터뷰_보도-1F6FEB?style=flat-square"/></a>
 </p>
@@ -14,7 +14,7 @@
 ## 🙋 About Me
 
 - **끝까지 완주하는 실행력** — 아이디어에서 끝나지 않고 데이터 수집, 개발, 배포, 운영까지 직접 책임집니다. 조대 후문 가성비 맛집 지도는 식당을 직접 방문해 데이터를 검증하고 첫 커밋 당일 배포해, 학우들이 실제로 쓰는 서비스가 되었습니다.
-- **설계 이유를 설명할 수 있는 백엔드** — 인덱스는 실제 쿼리 패턴에 맞춰 만들고, LLM 응답은 그대로 믿지 않고 DB로 다시 검증하는 것처럼 "왜 이렇게 만들었는지"를 근거와 함께 남깁니다. 정보처리기사 · SQLD로 다진 데이터 모델링 기초가 바탕입니다.
+- **설계 이유를 설명할 수 있는 백엔드** — 인덱스는 실제 쿼리 패턴에 맞춰 만들고, LLM 응답은 그대로 믿지 않고 DB로 다시 검증하는 것처럼 "왜 이렇게 만들었는지"를 근거와 함께 남깁니다. SQLD로 다진 데이터 모델링 기초가 바탕입니다.
 - **팀을 움직이는 리더십** — 컴퓨터공학과 학생회장으로 900명 규모 행사를 총괄했고, 캡스톤 프로젝트에서는 팀장으로서 Pull Request 18건을 모두 리뷰 · 머지하며 4명이 같은 코드베이스에서 안정적으로 협업하도록 이끌었습니다.
 
 ---
@@ -31,7 +31,7 @@
 - 종료 후 셀프 리뷰로 예외 메시지 노출 · 외부 API 타임아웃 부재 · 상태 전이 검증 누락을 고치고 GitHub Actions CI 도입 → [트러블슈팅](https://github.com/happyzerojun/team-builder-backend/blob/main/docs/troubleshooting.md)
 
 ### 🛒 [Commerce Web](https://github.com/happyzerojun/commerceweb-project) — 협업 필터링 추천 쇼핑몰
-`풀스택` `2인` `2026.01`
+`풀스택` `2인` `2026.01 ~ 10`
 `Java 21` `Spring Boot 3.4` `Spring Security` `PostgreSQL` `Redis` `React` `Docker Compose` `Nginx` `AWS EC2`
 
 - **사용자 기반 협업 필터링** — 셀프 조인 쿼리로 유사 사용자를 DB에서 한 번에 찾고, 신규 사용자 Cold Start는 인기 상품으로 대체, 결과는 **Redis에 캐싱**
@@ -40,7 +40,7 @@
 - 셀프 리뷰로 위조 서명 JWT가 500이 되던 문제, 추천 순위가 `IN` 조회 순서로 뒤섞이던 버그를 회귀 테스트와 함께 수정 → [트러블슈팅](https://github.com/happyzerojun/commerceweb-project/blob/main/docs/troubleshooting.md)
 
 ### 🍽️ [조대 후문 가성비 맛집 지도](https://github.com/happyzerojun/chosun-food-map) — 위치 기반 맛집 · 익명 리뷰 서비스
-`1인 개발` `광주일보 보도` `2026.05 ~ 06`
+`1인 개발` `광주일보 보도` `2026.05 ~ 10`
 `React 19` `Kakao Map` `Supabase (PostgreSQL)` `Vercel Serverless`
 
 - 로그인 없는 익명 리뷰의 도배를 막기 위해 **IP를 SHA-256 + pepper로 해시해 저장(원문 미보관)** 하고, 식당별 하루 1회 작성 제한을 서버에서 검증
@@ -75,7 +75,7 @@
 
 | 구분 | 내용 |
 | --- | --- |
-| 자격증 | 정보처리기사 · SQLD · NCA (Naver Cloud Platform Certified Associate) |
+| 자격증 | SQLD · NCA (Naver Cloud Platform Certified Associate) |
 | 언론 | 광주일보 인터뷰 — 대학가 가성비 맛집 지도 개발 |
 | 리더십 | 컴퓨터공학과 학생회장 — 900명 규모 행사 총괄 |
 | 프로젝트 리드 | 캡스톤 디자인 4인 팀 팀장 · 백엔드 리드 |
@@ -84,4 +84,4 @@
 
 ## 📬 Contact
 
-프로젝트별 설계 근거와 트러블슈팅은 [**기술 블로그**](https://airforce836.tistory.com)와 [**노션 포트폴리오**](https://www.notion.so/af866e443fdc45cb8d58adf062166958?source=copy_link)에 정리해 두었습니다.
+프로젝트별 설계 근거와 트러블슈팅은 [**기술 블로그**](https://airforce836.tistory.com)와 [**노션 포트폴리오**](https://youngjun-na.notion.site/Youngjun-Na-3ffa6cb817a381c1a891fcb25fa1e019)에 정리해 두었습니다.
