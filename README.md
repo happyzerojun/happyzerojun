@@ -21,6 +21,15 @@
 
 ## 📌 Projects
 
+### 📝 [OwnLog](https://github.com/AIP-1/blog-basic-AIGJ_01_007-firstblog) — 멀티유저 블로그 플랫폼
+`1인 개발` `2026.10 ~` · [설계·운영 문서](https://github.com/own-log/ownlog-docs)
+`Java 21` `Spring Boot 4.1` `Spring Security 7` `Flyway` `PostgreSQL 17` `React 19` `Docker` `Nginx` `GitHub Actions` `Testcontainers`
+
+- **동시 요청에도 정확한 카운터** — 좋아요·조회수를 원자적 UPDATE로 올리고 엔티티 필드를 `updatable=false`로 막아 덮어쓰기 차단, 중복 좋아요는 복합 PK + `ON CONFLICT DO NOTHING` → 동시 100명 좋아요 100, 1명 10번 연타 1
+- **파일 정합성** — 이미지 삭제는 커밋 후(`AFTER_COMMIT`), 업로드만 된 고아 파일은 24시간 유예 배치 + advisory lock으로 정리, flush·AFTER_COMMIT을 빼면 실패하는 테스트로 검증
+- **블루-그린 무중단 배포 설계** — 헬스 체크 통과 후에만 Nginx 전환, 추가만 하는 마이그레이션. 로컬 부하 측정에서 기존 방식 3,966건 중 308건 실패 → 블루-그린 13,308건 실패 0
+- 요구사항 104 · REST API 51 · 백엔드 테스트 212, Claude Code 페어 프로그래밍으로 개발(요구사항·설계 승인·검증 기준은 직접 결정) → [SonarLint 정리 글](https://airforce836.tistory.com/entry/sonarlint-transactional-self-invocation)
+
 ### 🚀 [Team Builder](https://github.com/happyzerojun/team-builder-backend) — AI 추천 기반 팀원 매칭 플랫폼
 `팀장 · 백엔드 리드` `4인` `2026.03 ~ 06`
 `Java 21` `Spring Boot 3.5` `JPA` `MySQL` `OAuth2 · JWT` `Gemini API` `Docker` `AWS EC2`
